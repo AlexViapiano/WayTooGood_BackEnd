@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkout_session",
+  "info": {
+    "name": "_Abandoned Carts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cart": {
+      "type": "json"
+    },
+    "user": {
+      "type": "json"
+    },
+    "complete": {
+      "type": "boolean"
+    },
+    "initiate_checkout": {
+      "type": "boolean"
+    },
+    "order": {
+      "model": "orders"
+    },
+    "email_sent": {
+      "type": "boolean"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

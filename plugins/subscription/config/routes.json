@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "subscription.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-subscriptions",
+      "handler": "subscription.getSubscriptions",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-subscriptions/:starting_after",
+      "handler": "subscription.getSubscriptions",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-cancelled",
+      "handler": "subscription.getCancelled",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-cancelled/:starting_after",
+      "handler": "subscription.getCancelled",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

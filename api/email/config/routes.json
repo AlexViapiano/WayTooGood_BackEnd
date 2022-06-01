@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/corporate-program",
+      "handler": "email.corporateProgram",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/become-supplier",
+      "handler": "email.becomeSupplier",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/request-return",
+      "handler": "email.requestReturn",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/contact-us",
+      "handler": "email.contactUs",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/confirm-subscribe",
+      "handler": "email.confirmSubscribe",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cancel-subscribe",
+      "handler": "email.cancelSubscribe",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

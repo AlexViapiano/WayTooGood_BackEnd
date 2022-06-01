@@ -1,0 +1,100 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/orders/createOrder",
+      "handler": "orders.createOrder",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orders/createOrderCheckoutSession",
+      "handler": "orders.createOrderCheckoutSession",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders",
+      "handler": "orders.find",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders/count",
+      "handler": "orders.count",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/orders/:id",
+      "handler": "orders.findOne",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/orders",
+      "handler": "orders.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/orders/:id",
+      "handler": "orders.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/orders/:id",
+      "handler": "orders.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/taxRates",
+      "handler": "orders.taxRates",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/promocode",
+      "handler": "orders.getPromoCode",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/prices",
+      "handler": "orders.prices",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/notifyCustomer",
+      "handler": "orders.notifyCustomer",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

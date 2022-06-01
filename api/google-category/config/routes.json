@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/google-categories",
+      "handler": "google-category.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/google-categories/count",
+      "handler": "google-category.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/google-categories/:id",
+      "handler": "google-category.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/google-categories",
+      "handler": "google-category.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/google-categories/:id",
+      "handler": "google-category.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/google-categories/:id",
+      "handler": "google-category.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

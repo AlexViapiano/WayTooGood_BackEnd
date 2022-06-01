@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "wbox_pages",
+  "info": {
+    "name": "Wbox Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "collection": "product"
+    }
+  }
+}

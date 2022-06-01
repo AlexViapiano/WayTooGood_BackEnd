@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchase_orders",
+  "info": {
+    "name": "_Purchase Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "via": "purchase_orders",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "taxes": {
+      "type": "decimal"
+    },
+    "product_qty": {
+      "type": "json"
+    },
+    "shipped": {
+      "type": "boolean",
+      "default": false
+    },
+    "shipping_city": {
+      "type": "string"
+    },
+    "products": {
+      "via": "purchase_orders",
+      "collection": "product"
+    },
+    "shipping_company": {
+      "type": "enumeration",
+      "enum": [
+        "Fedex",
+        "UPS",
+        "USPS",
+        "Purolator",
+        "CanadaPost",
+        "Other"
+      ]
+    },
+    "tracking_number": {
+      "type": "string"
+    },
+    "invoice": {
+      "via": "purchase_order",
+      "model": "invoice"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CAD",
+        "USD"
+      ]
+    },
+    "returned": {
+      "type": "boolean",
+      "default": false
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "supplier": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "supplier_address": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "string"
+    },
+    "billing_address": {
+      "type": "string"
+    },
+    "customer_details": {
+      "type": "json"
+    },
+    "order": {
+      "via": "purchase_orders",
+      "model": "orders"
+    },
+    "supplier_id": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "_Invoice",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "purchase_order": {
+      "via": "invoice",
+      "model": "purchase-orders"
+    },
+    "paid": {
+      "type": "boolean"
+    },
+    "date": {
+      "required": false,
+      "private": false,
+      "type": "date"
+    },
+    "reference_number": {
+      "type": "string"
+    },
+    "purchase_order_total": {
+      "type": "decimal"
+    },
+    "service_fee": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CAD",
+        "USD"
+      ]
+    },
+    "service_fee_subtotal": {
+      "type": "decimal"
+    },
+    "service_fee_taxes": {
+      "type": "decimal"
+    },
+    "supplier": {
+      "plugin": "admin",
+      "model": "user"
+    },
+    "supplier_id": {
+      "type": "integer"
+    }
+  }
+}

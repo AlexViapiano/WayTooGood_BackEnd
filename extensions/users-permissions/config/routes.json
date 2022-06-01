@@ -1,0 +1,183 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/users",
+      "handler": "user.updateUser",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Update User",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/createSendGridContact",
+      "handler": "user.createSendGridContact",
+      "config": {
+        "prefix": "",
+        "description": "Create SendGrid Contact",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/stripeCustomer",
+      "handler": "user.getStripeCustomer",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Get Stripe Customer",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/stripeCustomer",
+      "handler": "user.createStripeCustomer",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Create Stripe Customer",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/users/stripeCustomer",
+      "handler": "user.updateStripeCustomer",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Update Stripe Customer",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/subscriptions",
+      "handler": "user.getSubscriptions",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Get user subscriptions to WayTooGood plan",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/users/subscriptions/:subscriptionId",
+      "handler": "user.updateSubscription",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/subscribe",
+      "handler": "user.subscribe",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Subscribe to WayTooGood plan",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/customerCards",
+      "handler": "user.getCustomerCards",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Retreive paymentMethods of customer",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/createCheckoutSession",
+      "handler": "user.createCheckoutSession",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Get Stripe Billing Poral",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/users/billingPortal",
+      "handler": "user.createBillingPortalSession",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Get Stripe Billing Poral",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/paymentMethods",
+      "handler": "user.getPaymentMethods",
+      "config": {
+        "policies": ["global::isTargetUserLoggedIn"],
+        "prefix": "",
+        "description": "Retreive paymentMethods of customer",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "find"
+        }
+      }
+    }
+  ]
+}

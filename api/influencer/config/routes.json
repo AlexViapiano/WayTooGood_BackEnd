@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/influencers",
+      "handler": "influencer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/influencers/count",
+      "handler": "influencer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/influencers/:url",
+      "handler": "influencer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/influencers",
+      "handler": "influencer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/influencers/:id",
+      "handler": "influencer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/influencers/:id",
+      "handler": "influencer.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

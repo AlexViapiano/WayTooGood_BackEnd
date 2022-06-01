@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "_Payment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "supplier_name": {
+      "type": "string",
+      "required": false,
+      "private": false,
+      "unique": true
+    },
+    "supplier_address": {
+      "type": "string"
+    },
+    "stripe_acct_id": {
+      "type": "string",
+      "unique": false,
+      "private": true
+    },
+    "tax_rate": {
+      "type": "float"
+    },
+    "supplier_id": {
+      "type": "integer"
+    },
+    "has_convenience": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

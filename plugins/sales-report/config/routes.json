@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "sales-report.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/get-orders",
+      "handler": "sales-report.getOrders",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wbox-page",
+      "handler": "wbox-page.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wbox-page",
+      "handler": "wbox-page.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wbox-page",
+      "handler": "wbox-page.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

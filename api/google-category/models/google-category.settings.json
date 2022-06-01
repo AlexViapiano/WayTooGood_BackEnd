@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_categories",
+  "info": {
+    "name": "_Google Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category_id": {
+      "type": "biginteger"
+    },
+    "name": {
+      "type": "string"
+    },
+    "products": {
+      "via": "google_category",
+      "collection": "product"
+    },
+    "name_short": {
+      "type": "string"
+    }
+  }
+}

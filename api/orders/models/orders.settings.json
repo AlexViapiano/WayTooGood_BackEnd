@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "via": "orders",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "subtotal": {
+      "type": "decimal"
+    },
+    "taxes": {
+      "type": "decimal"
+    },
+    "product_qty": {
+      "type": "json"
+    },
+    "payment_intent_id": {
+      "type": "string"
+    },
+    "purchase_orders": {
+      "via": "order",
+      "collection": "purchase-orders"
+    },
+    "products": {
+      "via": "orders",
+      "collection": "product",
+      "dominant": true
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "CAD",
+        "USD"
+      ]
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "string"
+    },
+    "billing_address": {
+      "type": "string"
+    },
+    "customer_details": {
+      "type": "json"
+    },
+    "shipping_fee": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "promo_code": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "fulfilled": {
+      "type": "boolean"
+    },
+    "tracking_number": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "utm_source": {
+      "type": "string"
+    },
+    "utm_medium": {
+      "type": "string"
+    },
+    "utm_campaign": {
+      "type": "string"
+    },
+    "affiliate": {
+      "type": "string"
+    },
+    "shipping_label": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

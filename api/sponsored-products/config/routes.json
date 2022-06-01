@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sponsored-products",
+      "handler": "sponsored-products.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sponsored-products",
+      "handler": "sponsored-products.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sponsored-products",
+      "handler": "sponsored-products.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

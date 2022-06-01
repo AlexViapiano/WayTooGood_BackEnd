@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "_review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment": {
+      "type": "richtext"
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    },
+    "user": {
+      "via": "reviews",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "name": {
+      "type": "string"
+    },
+    "product": {
+      "via": "reviews",
+      "model": "product"
+    }
+  }
+}

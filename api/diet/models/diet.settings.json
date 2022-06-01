@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diets",
+  "info": {
+    "name": "_Diet",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "user": {
+      "via": "diets",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "products": {
+      "via": "diets",
+      "collection": "product"
+    },
+    "brand": {
+      "via": "diets",
+      "model": "brand"
+    }
+  }
+}

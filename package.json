@@ -1,0 +1,48 @@
+{
+  "name": "waytoogoodadmin",
+  "description": "Admin portal for WayTooGood",
+  "author": "Alex Viapiano",
+  "email": "alex@waytoogood.com",
+  "version": "1.0.3",
+  "private": true,
+  "scripts": {
+    "dev": "strapi develop",
+    "watch": "strapi develop -- --watch-admin",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "inspect": "NODE_OPTIONS='--inspect=0.0.0.0:9229' strapi start"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "knex": "<0.20.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "react-messenger-customer-chat": "^0.8.0",
+    "sales-tax": "^2.2.5",
+    "sqlite3": "latest",
+    "strapi": "3.6.8",
+    "strapi-admin": "3.6.8",
+    "strapi-connector-bookshelf": "3.6.8",
+    "strapi-plugin-content-manager": "3.6.8",
+    "strapi-plugin-content-type-builder": "3.6.8",
+    "strapi-plugin-email": "3.6.8",
+    "strapi-plugin-i18n": "3.6.8",
+    "strapi-plugin-sentry": "3.6.8",
+    "strapi-plugin-upload": "3.6.8",
+    "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-email-sendgrid": "3.6.8",
+    "strapi-provider-upload-aws-s3": "3.6.8",
+    "strapi-utils": "3.6.8",
+    "stripe": "^8.113.0"
+  },
+  "strapi": {
+    "uuid": "e780412e-30a3-4798-97ac-52083ae98a13"
+  },
+  "engines": {
+    "node": "12.20.0",
+    "npm": "6.14.8"
+  },
+  "license": "MIT"
+}
